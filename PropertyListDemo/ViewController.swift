@@ -26,6 +26,11 @@ class ViewController: UIViewController {
             for person in people {
                 print("First Name: \(String(describing: person["First Name"])), Last Name: \(String(describing: person["Last Name"])), Age: \(String(describing: person["Age"]))")
             }
+            
+            // Unwrapped Example
+            if let fName = people[0]["First Name"] {
+                print("First Name for first person: \(fName)")
+            }
         } catch {
             print("Error")
         }
