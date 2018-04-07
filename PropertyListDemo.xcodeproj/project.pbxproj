@@ -12,6 +12,7 @@
 		D4E1D48E207816BC003C68AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E1D48C207816BC003C68AE /* Main.storyboard */; };
 		D4E1D490207816BC003C68AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4E1D48F207816BC003C68AE /* Assets.xcassets */; };
 		D4E1D493207816BC003C68AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4E1D491207816BC003C68AE /* LaunchScreen.storyboard */; };
+		D4E1D49B2078E31A003C68AE /* People.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4E1D49A2078E31A003C68AE /* People.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		D4E1D48F207816BC003C68AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4E1D492207816BC003C68AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4E1D494207816BC003C68AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E1D49A2078E31A003C68AE /* People.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = People.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D4E1D48C207816BC003C68AE /* Main.storyboard */,
 				D4E1D48F207816BC003C68AE /* Assets.xcassets */,
 				D4E1D491207816BC003C68AE /* LaunchScreen.storyboard */,
+				D4E1D49A2078E31A003C68AE /* People.plist */,
 				D4E1D494207816BC003C68AE /* Info.plist */,
 			);
 			path = PropertyListDemo;
@@ -126,6 +129,7 @@
 				D4E1D493207816BC003C68AE /* LaunchScreen.storyboard in Resources */,
 				D4E1D490207816BC003C68AE /* Assets.xcassets in Resources */,
 				D4E1D48E207816BC003C68AE /* Main.storyboard in Resources */,
+				D4E1D49B2078E31A003C68AE /* People.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
