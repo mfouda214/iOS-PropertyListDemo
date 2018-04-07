@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     let plistUrl = Bundle.main.url(forResource: "People", withExtension: "plist")
     let fileManager = FileManager.default
+    var people: [Dictionary<String, Any>]?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,32 @@ class ViewController: UIViewController {
         
         if fileExistsInDocumentsDirectory() == false {
             seedDataToDocumentsDirectory()
+        }
+        
+        var plistFormat = PropertyListSerialization.PropertyListFormat.xml
+        
+        do {
+            let plistData = try Data(contentsOf: documentsDirectoryFileURL()!)
+            people = try PropertyListSerialization.propertyList(from: plistData, options: [], format: &plistFormat) as? [Dictionary<String, Any>]
+            
+            if var people = people {
+                for person in people {
+                    print("First Name: \(String(describing: person["First Name"])), Last Name: \(String(describing: person["Last Name"])), Age: \(String(describing: person["Age"]))")
+                }
+                
+                let anotherPerson = ["First Name" : "Mike", "Last Name" : "Holt", "Age" : 35] as [String : Any]
+                let yetAnotherPerson = ["First Name" : "Meg", "Last Name" : "Holt", "Age" : 35] as [String : Any]
+                people.append(anotherPerson)
+                people.append(yetAnotherPerson)
+                
+                let serializedData = try PropertyListSerialization.data(fromPropertyList: people, format: PropertyListSerialization.PropertyListFormat.xml, options: 0)
+                if let file = documentsDirectoryFileURL() {
+                    try serializedData.write(to: file)
+                    print(file)
+                }
+            }
+        } catch {
+            print("Error")
         }
 
         
